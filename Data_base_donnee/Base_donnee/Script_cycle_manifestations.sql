@@ -53,4 +53,4 @@ ON l.pk_lieu = e.fk_lieu_debut
 GROUP BY
     e.pk_evenement , s."type" 
 ORDER BY
-    e.pk_evenement , s."type" ;
+    e.date, e.pk_evenement , s."type";
