@@ -27,7 +27,7 @@ ON e.pk_evenement = lse.fk_evenement
 JOIN lieu l 
 ON l.pk_lieu = e.fk_lieu_debut ;
 
-SELECT e.nom , e.date , l.ville , COUNT(DISTINCT s."type") AS types_differents_sources
+SELECT e.pk_evenement, e.nom , e.date , l.ville , COUNT(DISTINCT s."type") AS types_differents_sources
 FROM "source" s 
 JOIN liaision_source_evenement lse 
 ON s.pk_source = lse.fk_source 
@@ -54,3 +54,26 @@ GROUP BY
     e.pk_evenement , s."type" 
 ORDER BY
     e.date, e.pk_evenement , s."type";
+
+SELECT DISTINCT e.pk_evenement , e.nom , e.date, l.pays, l.ville 
+FROM evenement e
+JOIN liaison_moyen_evenement lme 
+ON e.pk_evenement = lme.fk_evenement 
+JOIN moyen_action ma 
+ON ma.pk_moyen_action = lme.fk_moyen_action 
+JOIN lieu l
+ON l.pk_lieu = e.fk_lieu_debut
+WHERE ma."type" LIKE '%violent%'
+ORDER BY e.date ;
+
+SELECT DISTINCT e.nom, e.date, e."type", l.ville 
+FROM evenement e 
+JOIN liaison_pres_organisation_evenement lpoe 
+ON lpoe.fk_evenement = e.pk_evenement 
+JOIN organisation_association oa 
+ON oa.pk_organisation = lpoe.fk_organisation
+JOIN lieu l 
+ON l.pk_lieu = e.fk_lieu_debut 
+WHERE oa.nom = 'Ligue marxiste révolutionnaire'
+ORDER BY e.date;
+
