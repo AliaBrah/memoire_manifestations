@@ -55,7 +55,7 @@ GROUP BY
 ORDER BY
     e.date, e.pk_evenement , s."type";
 
-SELECT DISTINCT e.pk_evenement , e.nom , e.date, l.pays, l.ville 
+SELECT DISTINCT e.pk_evenement , e.nom , e.date, l.pays, l.ville
 FROM evenement e
 JOIN liaison_moyen_evenement lme 
 ON e.pk_evenement = lme.fk_evenement 
@@ -66,7 +66,7 @@ ON l.pk_lieu = e.fk_lieu_debut
 WHERE ma."type" LIKE '%violent%'
 ORDER BY e.date ;
 
-SELECT DISTINCT e.nom, e.date, e."type", l.ville 
+SELECT DISTINCT e.pk_evenement, e.nom, e.date, e."type", l.ville, oa.nom 
 FROM evenement e 
 JOIN liaison_pres_organisation_evenement lpoe 
 ON lpoe.fk_evenement = e.pk_evenement 
@@ -74,6 +74,15 @@ JOIN organisation_association oa
 ON oa.pk_organisation = lpoe.fk_organisation
 JOIN lieu l 
 ON l.pk_lieu = e.fk_lieu_debut 
-WHERE oa.nom = 'Ligue marxiste révolutionnaire'
+WHERE oa.nom LIKE '%Ligue%'
 ORDER BY e.date;
 
+SELECT DISTINCT e.pk_evenement , e.nom , e.date, e."type", l.ville 
+FROM personne p 
+JOIN participation p2 
+ON p.pk_personne = p2.fk_personne 
+JOIN evenement e 
+ON e.pk_evenement = p2.fk_evenement 
+JOIN lieu l 
+ON l.pk_lieu = e.fk_lieu_debut 
+WHERE p2.fk_personne = '1'
