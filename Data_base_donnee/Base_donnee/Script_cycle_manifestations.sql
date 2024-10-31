@@ -133,3 +133,8 @@ ORDER BY
  FROM resaux_asso_evenement rae
 GROUP by pk_evenement 
 ORDER BY date ;
+
+SELECT e.pk_evenement, e.nom, e.date, l.nom ,l.ville, l.pays, l.latitude , l.longitude 
+FROM evenement e 
+JOIN lieu l 
+ON e.fk_lieu_debut = l.pk_lieu ;
