@@ -85,4 +85,51 @@ JOIN evenement e
 ON e.pk_evenement = p2.fk_evenement 
 JOIN lieu l 
 ON l.pk_lieu = e.fk_lieu_debut 
-WHERE p2.fk_personne = '1'
+WHERE p2.fk_personne = '1';
+
+SELECT 
+    e.pk_evenement AS id_objet,
+    e.nom AS nom_objet,
+    COUNT(oa.pk_organisation) AS nombre_liaisons
+FROM organisation_association oa 
+JOIN liaison_pres_organisation_evenement lpoe
+ON lpoe.fk_organisation = oa.pk_organisation 
+JOIN evenement e 
+ON e.pk_evenement = lpoe.fk_evenement
+JOIN lieu l 
+ ORDER BY e.date;
+
+-- view pour analyse de réseaux
+
+-- CREATE VIEW resaux_asso_evenement
+AS
+SELECT 
+    oa.nom ,
+    e.pk_evenement, 
+    e.nom AS nom_evenement, 
+    e.date, 
+    l.nom AS nom_lieu, 
+    l.ville, 
+    l.pays
+FROM 
+    organisation_association oa 
+JOIN 
+    liaison_pres_organisation_evenement lpoe ON lpoe.fk_organisation = oa.pk_organisation 
+JOIN 
+    evenement e ON e.pk_evenement = lpoe.fk_evenement
+JOIN 
+    lieu l ON l.pk_lieu = e.fk_lieu_debut
+GROUP BY 
+    oa.nom, 
+    e.nom, 
+    e.date, 
+    l.nom, 
+    l.ville, 
+    l.pays
+ORDER BY 
+    e.date;
+ 
+ SELECT pk_evenement, COUNT(*) AS eff , date 
+ FROM resaux_asso_evenement rae
+GROUP by pk_evenement 
+ORDER BY date ;
