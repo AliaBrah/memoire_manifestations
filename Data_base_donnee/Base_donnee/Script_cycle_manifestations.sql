@@ -138,3 +138,59 @@ SELECT e.pk_evenement, e.nom, e.date, l.nom ,l.ville, l.pays, l.latitude , l.lon
 FROM evenement e 
 JOIN lieu l 
 ON e.fk_lieu_debut = l.pk_lieu ;
+
+-- Analyse bivariée
+
+SELECT 
+    e."type" AS nom_evenement,
+    oa.nom AS nom_organisation,
+    COUNT(lpoe.fk_organisation) AS occurrences
+FROM 
+    evenement e 
+JOIN 
+    liaison_pres_organisation_evenement lpoe ON e.pk_evenement = lpoe.fk_evenement 
+JOIN 
+    organisation_association oa ON lpoe.fk_organisation = oa.pk_organisation 
+GROUP BY 
+    e.type, oa.nom 
+ORDER BY 
+    occurrences DESC;
+
+SELECT 
+    e."type" AS nom_evenement,
+    oa.nom AS nom_organisation,
+    COUNT(DISTINCT lpoe.fk_organisation) AS occurrences,  -- Compte les organisations
+    GROUP_CONCAT(DISTINCT e.date) AS dates_associees
+FROM 
+    evenement e 
+JOIN 
+    liaison_pres_organisation_evenement lpoe ON e.pk_evenement = lpoe.fk_evenement 
+JOIN 
+    liaison_org_organisation_evenement looe ON looe.fk_evenement = e.pk_evenement
+JOIN 
+    organisation_association oa ON oa.pk_organisation = lpoe.fk_organisation 
+GROUP BY 
+    e.type, oa.nom 
+ORDER BY 
+    occurrences DESC;
+   
+
+
+
+
+
+
+  SELECT 
+    e.nom AS nom_evenement,
+    oa.nom AS nom_organisation,
+    COUNT(lpoe.fk_organisation) AS occurrences
+FROM 
+    evenement e 
+JOIN 
+    liaison_pres_organisation_evenement lpoe ON e.pk_evenement = lpoe.fk_evenement 
+JOIN 
+    organisation_association oa ON lpoe.fk_organisation = oa.pk_organisation 
+GROUP BY 
+    e.nom, oa.nom 
+ORDER BY 
+    occurrences DESC;
