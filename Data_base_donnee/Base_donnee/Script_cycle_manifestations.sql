@@ -102,7 +102,7 @@ JOIN lieu l
 -- view pour analyse de réseaux
 
 -- CREATE VIEW resaux_asso_evenement
-AS
+-- AS
 SELECT 
     oa.nom ,
     e.pk_evenement, 
@@ -194,3 +194,30 @@ GROUP BY
     e.nom, oa.nom 
 ORDER BY 
     occurrences DESC;
+
+-- Script moyens d'actions et évolutions dans le cycle.
+SELECT 
+    ma.nom ,
+    e.pk_evenement, 
+    e.nom AS nom_evenement, 
+    e.date, 
+    l.nom AS nom_lieu, 
+    l.ville, 
+    l.pays
+FROM 
+    moyen_action ma 
+JOIN 
+   liaison_moyen_evenement lme ON lme.fk_moyen_action = ma.pk_moyen_action 
+JOIN 
+    evenement e ON e.pk_evenement = lme.fk_evenement
+JOIN 
+    lieu l ON l.pk_lieu = e.fk_lieu_debut
+GROUP BY 
+    ma.nom, 
+    e.nom, 
+    e.date, 
+    l.nom, 
+    l.ville, 
+    l.pays
+ORDER BY 
+    e.date;
