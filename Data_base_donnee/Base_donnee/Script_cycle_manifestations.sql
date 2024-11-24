@@ -108,7 +108,7 @@ JOIN lieu l
 -- view pour analyse de réseaux
 
 -- CREATE VIEW resaux_asso_evenement
--- AS
+AS
 SELECT 
     oa.nom ,
     e.pk_evenement, 
@@ -133,12 +133,12 @@ GROUP BY
     l.ville, 
     l.pays
 ORDER BY 
-    e.date;
+    e.date ;
  
  SELECT pk_evenement, COUNT(*) AS eff , date 
  FROM resaux_asso_evenement rae
 GROUP by pk_evenement 
-ORDER BY date ;
+ORDER BY pk_evenement ;
 
 SELECT e.pk_evenement, e.nom, e.date, l.nom ,l.ville, l.pays, l.latitude , l.longitude 
 FROM evenement e 
