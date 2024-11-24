@@ -1,3 +1,9 @@
+SELECT lse.fk_evenement, lse.fk_source 
+FROM liaision_source_evenement lse
+join evenement e 
+on e.pk_evenement = lse.fk_evenement 
+WHERE e.date = '1973-05-24';
+
 SELECT ma.nom, e.nom 
 FROM moyen_action ma 
 JOIN liaison_moyen_evenement lme 
