@@ -1,3 +1,11 @@
+SELECT e.nom, e.date, e.pk_evenement 
+From evenement e 
+JOIN liaison_pres_organisation_evenement lpoe 
+ON e.pk_evenement = lpoe.fk_evenement 
+join organisation_association oa 
+on oa.pk_organisation = lpoe.fk_organisation 
+WHERE oa.nom = 'FTMH section Genève';
+
 SELECT lse.fk_evenement, lse.fk_source 
 FROM liaision_source_evenement lse
 join evenement e 
@@ -135,6 +143,7 @@ GROUP BY
 ORDER BY 
     e.date ;
  
+   -- CSV analyse_memoire_essai
  SELECT pk_evenement, COUNT(*) AS eff , date 
  FROM resaux_asso_evenement rae
 GROUP by pk_evenement 
