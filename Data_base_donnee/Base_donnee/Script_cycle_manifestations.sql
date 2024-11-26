@@ -1,3 +1,9 @@
+-- nombre de sources par type de sources
+SELECT s."type" , COUNT(*) AS eff 
+FROM "source" s 
+GROUP by s."type" 
+ORDER BY eff ;
+-- rechecrhe de chose précise dans la base de données
 SELECT e.nom, e.date, e.pk_evenement 
 From evenement e 
 JOIN liaison_pres_organisation_evenement lpoe 
@@ -112,6 +118,14 @@ JOIN evenement e
 ON e.pk_evenement = lpoe.fk_evenement
 JOIN lieu l 
  ORDER BY e.date;
+
+-- view pour distribution des évènements
+-- CREATE VIEW distribution_tempo_evenements
+AS
+SELECT e.pk_evenement, e.nom, e.date as date_debut, e.date as date_fin, l.pays 
+FROM evenement e 
+JOIN lieu l 
+ON e.fk_lieu_debut = l.pk_lieu;
 
 -- view pour analyse de réseaux
 
