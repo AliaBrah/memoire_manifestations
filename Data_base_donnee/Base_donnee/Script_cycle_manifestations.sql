@@ -1,9 +1,20 @@
+-- toutes les organisations à la manif du 23 juin
+SELECT oa.nom, s.titre, s.date 
+From evenement e 
+join liaison_pres_organisation_evenement lpoe 
+on e.pk_evenement = lpoe.fk_evenement 
+JOIN organisation_association oa 
+ON oa.pk_organisation = lpoe.fk_organisation 
+JOIN "source" s 
+ON s.pk_source = lpoe.fk_source 
+WHERE lpoe.fk_evenement = '16';
+
 -- nombre de sources par type de sources
 SELECT s."type" , COUNT(*) AS eff 
 FROM "source" s 
 GROUP by s."type" 
 ORDER BY eff ;
--- rechecrhe de chose précise dans la base de données
+-- recherche de chose précise dans la base de données
 SELECT e.nom, e.date, e.pk_evenement 
 From evenement e 
 JOIN liaison_pres_organisation_evenement lpoe 
@@ -119,6 +130,27 @@ ON e.pk_evenement = lpoe.fk_evenement
 JOIN lieu l 
  ORDER BY e.date;
 
+
+-- view pour distribution moyens d'actions des évènements
+-- CREATE VIEW distribution_tempo_moyens
+-- AS
+SELECT e.pk_evenement, e.nom as nom_evenement, e."type", e.date, l.pays, ma.pk_moyen_action, ma.nom as nom_moyen_action
+From moyen_action ma 
+JOIN liaison_moyen_evenement lme 
+ON ma.pk_moyen_action = lme.fk_moyen_action 
+JOIN evenement e 
+ON e.pk_evenement = lme.fk_evenement
+JOIN lieu l 
+ON l.pk_lieu = e.fk_lieu_debut
+WHERE l.pays = 'Suisse'
+ORDER BY e.pk_evenement;
+
+SELECT e.pk_evenement, e.nom, e.date, l.pays
+From evenement e
+JOIN lieu l 
+ON l.pk_lieu = e.fk_lieu_debut
+WHERE l.pays = 'Suisse'
+ORDER BY e.pk_evenement ;
 -- view pour distribution des évènements
 -- CREATE VIEW distribution_tempo_evenements
 AS
