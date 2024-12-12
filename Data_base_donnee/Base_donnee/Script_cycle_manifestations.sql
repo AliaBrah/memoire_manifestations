@@ -1,3 +1,4 @@
+
 -- toutes les organisations à la manif du 23 juin
 SELECT oa.nom, s.titre, s.date 
 From evenement e 
@@ -129,6 +130,24 @@ JOIN evenement e
 ON e.pk_evenement = lpoe.fk_evenement
 JOIN lieu l 
  ORDER BY e.date;
+
+-- view pour les évènements suisse où vient Piaget
+-- CREATE VIEW 
+-- AS
+Select e.pk_evenement , e.nom as nom_evenement, e.date , oa.pk_organisation, oa.nom as nom_organisation
+From participation p 
+JOIN personne p2 
+ON p.fk_personne = p2.pk_personne 
+JOIN evenement e 
+ON p.fk_evenement = e.pk_evenement 
+JOIN liaison_org_organisation_evenement looe 
+on looe.fk_evenement = e.pk_evenement 
+JOIN organisation_association oa 
+ON oa.pk_organisation = looe.fk_organisation
+JOIN lieu l 
+ON l.pk_lieu = e.fk_lieu_debut 
+WHERE l.pays = 'Suisse' AND p2.nom = 'Piaget'
+order by e.date ;
 
 
 -- view pour distribution moyens d'actions des évènements
