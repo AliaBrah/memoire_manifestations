@@ -1,4 +1,14 @@
+# Exploration des données disponibles sur les manifestations en général
 
+Novembre 2024
+
+
+
+## Manifestation dans Wikidata
+
+Il ne semble pas qu'il y ait des données réutilisables (mais à vérifier plus en détail)
+
+<br/>
 
 
 ```SQL
