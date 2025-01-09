@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f5e7e87c0a0e13c0f3f138bce80fb24d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f5e7e87c0a0e13c0f3f138bce80fb24d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f5e7e87c0a0e13c0f3f138bce80fb24d = L.map(
+                "map_f5e7e87c0a0e13c0f3f138bce80fb24d",
+                {
+                    center: [46.8, 7.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_afca9dcafdddc5442b63e22590298cb3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_afca9dcafdddc5442b63e22590298cb3.addTo(map_f5e7e87c0a0e13c0f3f138bce80fb24d);
+        
+    
+            var marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_f77ca82889c7a679482f7a23dc4b7009 = L.marker(
+                [46.99188006348184, 6.9343458441569386],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_11207f24ff3c442a22e93aa3ef36f912 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f77ca82889c7a679482f7a23dc4b7009.setIcon(icon_11207f24ff3c442a22e93aa3ef36f912);
+        
+    
+        var popup_75e54f67300dc7d2f8bd2058b57a7687 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_490eb3aa886b265b13ca8f0e6e3b7f5d = $(`<div id="html_490eb3aa886b265b13ca8f0e6e3b7f5d" style="width: 100.0%; height: 100.0%;">manifestation des ouvrier-ère-s de Lip<br>Date: 1973-05-18 00:00:00</div>`)[0];
+                popup_75e54f67300dc7d2f8bd2058b57a7687.setContent(html_490eb3aa886b265b13ca8f0e6e3b7f5d);
+            
+        
+
+        marker_f77ca82889c7a679482f7a23dc4b7009.bindPopup(popup_75e54f67300dc7d2f8bd2058b57a7687)
+        ;
+
+        
+    
+    
+            var marker_33ef01b889ae6eefefeae621fc6e22cf = L.marker(
+                [46.99320982097671, 6.930432108830188],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_3675b6bb450ad0b89f185cfe3f87dd06 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_33ef01b889ae6eefefeae621fc6e22cf.setIcon(icon_3675b6bb450ad0b89f185cfe3f87dd06);
+        
+    
+        var popup_e104c74803326448941c52cdb7c032f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1030bb76d54a37acd39b968e93a703a5 = $(`<div id="html_1030bb76d54a37acd39b968e93a703a5" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-05-25 00:00:00</div>`)[0];
+                popup_e104c74803326448941c52cdb7c032f6.setContent(html_1030bb76d54a37acd39b968e93a703a5);
+            
+        
+
+        marker_33ef01b889ae6eefefeae621fc6e22cf.bindPopup(popup_e104c74803326448941c52cdb7c032f6)
+        ;
+
+        
+    
+    
+            var marker_58bcca0da6c3bed507882a2e4ea66391 = L.marker(
+                [47.05768749590493, 6.603599220502514],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_ab65179226a5c5506244f4bc62040068 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_58bcca0da6c3bed507882a2e4ea66391.setIcon(icon_ab65179226a5c5506244f4bc62040068);
+        
+    
+        var popup_21ed3bb26455f7dab08ef63cabd943ab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fba13bfbb9a3a400cfa0b373ad38e53a = $(`<div id="html_fba13bfbb9a3a400cfa0b373ad38e53a" style="width: 100.0%; height: 100.0%;">manifestation des ouvrier-ère-s de Lip<br>Date: 1973-05-18 00:00:00</div>`)[0];
+                popup_21ed3bb26455f7dab08ef63cabd943ab.setContent(html_fba13bfbb9a3a400cfa0b373ad38e53a);
+            
+        
+
+        marker_58bcca0da6c3bed507882a2e4ea66391.bindPopup(popup_21ed3bb26455f7dab08ef63cabd943ab)
+        ;
+
+        
+    
+    
+            var marker_6caabd1513f2d7b21da36d9f07ac0871 = L.marker(
+                [47.0592181584143, 6.668719524003341],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_bb30b60dafdb71632c397ca9598766a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6caabd1513f2d7b21da36d9f07ac0871.setIcon(icon_bb30b60dafdb71632c397ca9598766a5);
+        
+    
+        var popup_3991ed8f87d44ce8f5b469e10026c2ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25883c8fc2e4ebb31405e49752830344 = $(`<div id="html_25883c8fc2e4ebb31405e49752830344" style="width: 100.0%; height: 100.0%;">manifestation des ouvrier-ère-s de Lip<br>Date: 1973-05-18 00:00:00</div>`)[0];
+                popup_3991ed8f87d44ce8f5b469e10026c2ea.setContent(html_25883c8fc2e4ebb31405e49752830344);
+            
+        
+
+        marker_6caabd1513f2d7b21da36d9f07ac0871.bindPopup(popup_3991ed8f87d44ce8f5b469e10026c2ea)
+        ;
+
+        
+    
+    
+            var marker_8f7f7eed89d7e6ea9984911d8e3f48fb = L.marker(
+                [47.23500720202205, 6.038661626981228],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_9d03a4178e26793fad5450ae67b76544 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f7f7eed89d7e6ea9984911d8e3f48fb.setIcon(icon_9d03a4178e26793fad5450ae67b76544);
+        
+    
+        var popup_eb7dbcf70e987ba9cce026211cf87e0f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53c5709640c0756e43176227061d7756 = $(`<div id="html_53c5709640c0756e43176227061d7756" style="width: 100.0%; height: 100.0%;">regroupement devant le consulat suisse des ouvrier-ère-s de Lip<br>Date: 1973-05-18 00:00:00</div>`)[0];
+                popup_eb7dbcf70e987ba9cce026211cf87e0f.setContent(html_53c5709640c0756e43176227061d7756);
+            
+        
+
+        marker_8f7f7eed89d7e6ea9984911d8e3f48fb.bindPopup(popup_eb7dbcf70e987ba9cce026211cf87e0f)
+        ;
+
+        
+    
+    
+            var marker_095f7ce074ee7d047f782c464c25b2ce = L.marker(
+                [46.99192346749312, 6.931205948736114],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_bdf4e39603929f8e22f440957740891a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_095f7ce074ee7d047f782c464c25b2ce.setIcon(icon_bdf4e39603929f8e22f440957740891a);
+        
+    
+        var popup_cf7c87c4f4ccab14d2a6955e01055cbd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61227e036be3cf5217fc95f62f7a6e0c = $(`<div id="html_61227e036be3cf5217fc95f62f7a6e0c" style="width: 100.0%; height: 100.0%;">regroupement devant le siège d'Ebauches S.A<br>Date: 1973-05-28 00:00:00</div>`)[0];
+                popup_cf7c87c4f4ccab14d2a6955e01055cbd.setContent(html_61227e036be3cf5217fc95f62f7a6e0c);
+            
+        
+
+        marker_095f7ce074ee7d047f782c464c25b2ce.bindPopup(popup_cf7c87c4f4ccab14d2a6955e01055cbd)
+        ;
+
+        
+    
+    
+            var marker_86eac388ea38a59757617bef8dae92f7 = L.marker(
+                [47.23796264126725, 6.024281645694291],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_d0eecf041d5e73ac2014cb23c21d35af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_86eac388ea38a59757617bef8dae92f7.setIcon(icon_d0eecf041d5e73ac2014cb23c21d35af);
+        
+    
+        var popup_f0ffcc68fec9a7e70c8f01b1015cbcd1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdd8437e32af59576145793f7fa472ca = $(`<div id="html_bdd8437e32af59576145793f7fa472ca" style="width: 100.0%; height: 100.0%;">première manifestation publique en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-05-24 00:00:00</div>`)[0];
+                popup_f0ffcc68fec9a7e70c8f01b1015cbcd1.setContent(html_bdd8437e32af59576145793f7fa472ca);
+            
+        
+
+        marker_86eac388ea38a59757617bef8dae92f7.bindPopup(popup_f0ffcc68fec9a7e70c8f01b1015cbcd1)
+        ;
+
+        
+    
+    
+            var marker_59de8cfc26b16c87ad9608397b4dd331 = L.marker(
+                [48.81888822402997, 2.359906776271288],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_31cbebfad1a7e5602a441a6e2eb13dfe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_59de8cfc26b16c87ad9608397b4dd331.setIcon(icon_31cbebfad1a7e5602a441a6e2eb13dfe);
+        
+    
+        var popup_43af1e1cb442465a276577fc6170c9be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_24a328fb572d758a01b674e93467fe8f = $(`<div id="html_24a328fb572d758a01b674e93467fe8f" style="width: 100.0%; height: 100.0%;">manifestation des ouvrier-ère-s de Lip jusqu'à l'ambassade suisse<br>Date: 1973-05-29 00:00:00</div>`)[0];
+                popup_43af1e1cb442465a276577fc6170c9be.setContent(html_24a328fb572d758a01b674e93467fe8f);
+            
+        
+
+        marker_59de8cfc26b16c87ad9608397b4dd331.bindPopup(popup_43af1e1cb442465a276577fc6170c9be)
+        ;
+
+        
+    
+    
+            var marker_84dbccb1228a5be5d26549c7b3336098 = L.marker(
+                [47.26649065218147, 6.050844610052359],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_c4125ce746b9631d8ed7e60a00cfe5f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_84dbccb1228a5be5d26549c7b3336098.setIcon(icon_c4125ce746b9631d8ed7e60a00cfe5f4);
+        
+    
+        var popup_d9ef4aeca30403ce525b384443538b0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_081a49a41346cef435c29ad7b7468097 = $(`<div id="html_081a49a41346cef435c29ad7b7468097" style="width: 100.0%; height: 100.0%;">regroupement devant l'usine Lip des ouvrier-ère-s de Lip<br>Date: 1973-06-12 00:00:00</div>`)[0];
+                popup_d9ef4aeca30403ce525b384443538b0a.setContent(html_081a49a41346cef435c29ad7b7468097);
+            
+        
+
+        marker_84dbccb1228a5be5d26549c7b3336098.bindPopup(popup_d9ef4aeca30403ce525b384443538b0a)
+        ;
+
+        
+    
+    
+            var marker_270cca50ea534c2a80851162d7a7c4a7 = L.marker(
+                [47.26649065218147, 6.050844610052359],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_1583f092316d8110e34bdc73fc045e21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_270cca50ea534c2a80851162d7a7c4a7.setIcon(icon_1583f092316d8110e34bdc73fc045e21);
+        
+    
+        var popup_a78c4b1e3ddf9577b04e932e803c6eb1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b3de35d418adbfc518a209c6e303df9 = $(`<div id="html_0b3de35d418adbfc518a209c6e303df9" style="width: 100.0%; height: 100.0%;">meeting des responsables des ouvrier-ère-s de Lip<br>Date: 1973-06-13 00:00:00</div>`)[0];
+                popup_a78c4b1e3ddf9577b04e932e803c6eb1.setContent(html_0b3de35d418adbfc518a209c6e303df9);
+            
+        
+
+        marker_270cca50ea534c2a80851162d7a7c4a7.bindPopup(popup_a78c4b1e3ddf9577b04e932e803c6eb1)
+        ;
+
+        
+    
+    
+            var marker_a3533b436d4be93ca520f8161bde8aee = L.marker(
+                [47.24416774529365, 6.020837181229862],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_d3d6f121b3a140d8739e0588fc508801 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a3533b436d4be93ca520f8161bde8aee.setIcon(icon_d3d6f121b3a140d8739e0588fc508801);
+        
+    
+        var popup_ca2cabd840480be89648c5f33da1f513 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f27ef53525706ffd20e8ea3fa8160cae = $(`<div id="html_f27ef53525706ffd20e8ea3fa8160cae" style="width: 100.0%; height: 100.0%;">manifestation « ville morte »<br>Date: 1973-06-15 00:00:00</div>`)[0];
+                popup_ca2cabd840480be89648c5f33da1f513.setContent(html_f27ef53525706ffd20e8ea3fa8160cae);
+            
+        
+
+        marker_a3533b436d4be93ca520f8161bde8aee.bindPopup(popup_ca2cabd840480be89648c5f33da1f513)
+        ;
+
+        
+    
+    
+            var marker_c7a3d47455239e581f1e8e6f748723b7 = L.marker(
+                [47.152135947796985, 6.996678263848151],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_55faf660f742dec8e54f915901c14744 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c7a3d47455239e581f1e8e6f748723b7.setIcon(icon_55faf660f742dec8e54f915901c14744);
+        
+    
+        var popup_912f2c288bf315f2ab816d5897c2048e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c02a8e3b960dda56dd0079b8667b4101 = $(`<div id="html_c02a8e3b960dda56dd0079b8667b4101" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-06-20 00:00:00</div>`)[0];
+                popup_912f2c288bf315f2ab816d5897c2048e.setContent(html_c02a8e3b960dda56dd0079b8667b4101);
+            
+        
+
+        marker_c7a3d47455239e581f1e8e6f748723b7.bindPopup(popup_912f2c288bf315f2ab816d5897c2048e)
+        ;
+
+        
+    
+    
+            var marker_b00ae810b7d027a03972421fdc205daf = L.marker(
+                [47.1421580409844, 7.24739293438954],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_dc5057e611a8155eecd3a66ce7de8bde = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b00ae810b7d027a03972421fdc205daf.setIcon(icon_dc5057e611a8155eecd3a66ce7de8bde);
+        
+    
+        var popup_95ad09faf209a983a8ad18ceae26068c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6fa4c7753a4a6306427d9a44fdaacf82 = $(`<div id="html_6fa4c7753a4a6306427d9a44fdaacf82" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-06-20 00:00:00</div>`)[0];
+                popup_95ad09faf209a983a8ad18ceae26068c.setContent(html_6fa4c7753a4a6306427d9a44fdaacf82);
+            
+        
+
+        marker_b00ae810b7d027a03972421fdc205daf.bindPopup(popup_95ad09faf209a983a8ad18ceae26068c)
+        ;
+
+        
+    
+    
+            var marker_ee1ac5b9a0cd724b46471b9aef54f8c0 = L.marker(
+                [47.10023912061968, 6.823338403696736],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_d587a3092fb91674e83cc67175a29380 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ee1ac5b9a0cd724b46471b9aef54f8c0.setIcon(icon_d587a3092fb91674e83cc67175a29380);
+        
+    
+        var popup_c449425f91ce567aefd30ee05af68ec9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b213d36ebc09de3e408788d161b44e69 = $(`<div id="html_b213d36ebc09de3e408788d161b44e69" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-06-21 00:00:00</div>`)[0];
+                popup_c449425f91ce567aefd30ee05af68ec9.setContent(html_b213d36ebc09de3e408788d161b44e69);
+            
+        
+
+        marker_ee1ac5b9a0cd724b46471b9aef54f8c0.bindPopup(popup_c449425f91ce567aefd30ee05af68ec9)
+        ;
+
+        
+    
+    
+            var marker_03c354ba7edbb8179c34a3b8f1a43ccd = L.marker(
+                [47.0993823351441, 6.825140016714371],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_ad29fa09902be1fa22f950fee7a18878 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_03c354ba7edbb8179c34a3b8f1a43ccd.setIcon(icon_ad29fa09902be1fa22f950fee7a18878);
+        
+    
+        var popup_e4d94e8cb67752893b2ce5bec0c1299d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f711f5b5eef5f1713f8e57f306fef8c = $(`<div id="html_6f711f5b5eef5f1713f8e57f306fef8c" style="width: 100.0%; height: 100.0%;">manifestation internationale<br>Date: 1973-06-23 00:00:00</div>`)[0];
+                popup_e4d94e8cb67752893b2ce5bec0c1299d.setContent(html_6f711f5b5eef5f1713f8e57f306fef8c);
+            
+        
+
+        marker_03c354ba7edbb8179c34a3b8f1a43ccd.bindPopup(popup_e4d94e8cb67752893b2ce5bec0c1299d)
+        ;
+
+        
+    
+    
+            var marker_4ea0eee6162ad1de78a3ec66ee896a02 = L.marker(
+                [47.10023912061968, 6.823338403696736],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_e65c87a332bb91fa50a1818ca9f4a94f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4ea0eee6162ad1de78a3ec66ee896a02.setIcon(icon_e65c87a332bb91fa50a1818ca9f4a94f);
+        
+    
+        var popup_47571f154dec3d67caec64bb1213ff51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5b2ad30d59383b6a763b5e03c86121c = $(`<div id="html_b5b2ad30d59383b6a763b5e03c86121c" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-06-23 00:00:00</div>`)[0];
+                popup_47571f154dec3d67caec64bb1213ff51.setContent(html_b5b2ad30d59383b6a763b5e03c86121c);
+            
+        
+
+        marker_4ea0eee6162ad1de78a3ec66ee896a02.bindPopup(popup_47571f154dec3d67caec64bb1213ff51)
+        ;
+
+        
+    
+    
+            var marker_98fc37112f11abb6192cf668f9ea4009 = L.marker(
+                [47.10023912061968, 6.823338403696736],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_424610cb1cb098656a0ddf9f834487b4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_98fc37112f11abb6192cf668f9ea4009.setIcon(icon_424610cb1cb098656a0ddf9f834487b4);
+        
+    
+        var popup_03ba23e97633790aaf7776f1353531d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e730c4609e4d55db834ce84312c1052f = $(`<div id="html_e730c4609e4d55db834ce84312c1052f" style="width: 100.0%; height: 100.0%;">assemblée d’information à l'intention des ouvrier-ère-s chaux-de-fonniers<br>Date: 1973-06-27 00:00:00</div>`)[0];
+                popup_03ba23e97633790aaf7776f1353531d7.setContent(html_e730c4609e4d55db834ce84312c1052f);
+            
+        
+
+        marker_98fc37112f11abb6192cf668f9ea4009.bindPopup(popup_03ba23e97633790aaf7776f1353531d7)
+        ;
+
+        
+    
+    
+            var marker_d024eda07b7b91e7c365de7a3c75d873 = L.marker(
+                [47.26649065218147, 6.050844610052359],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_0d934d897ee24bb9e4265c13404e52de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d024eda07b7b91e7c365de7a3c75d873.setIcon(icon_0d934d897ee24bb9e4265c13404e52de);
+        
+    
+        var popup_01ae2bf6103aeda136a7ea5aa3be07e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f14556ae835708188a460ac8d55925da = $(`<div id="html_f14556ae835708188a460ac8d55925da" style="width: 100.0%; height: 100.0%;">manifestation en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-14 00:00:00</div>`)[0];
+                popup_01ae2bf6103aeda136a7ea5aa3be07e3.setContent(html_f14556ae835708188a460ac8d55925da);
+            
+        
+
+        marker_d024eda07b7b91e7c365de7a3c75d873.bindPopup(popup_01ae2bf6103aeda136a7ea5aa3be07e3)
+        ;
+
+        
+    
+    
+            var marker_39af30ed556fc0cd6591146916b5be77 = L.marker(
+                [47.36721491201862, 7.34745523932586],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_21fbf4a6181ef571b975d560bfcded37 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_39af30ed556fc0cd6591146916b5be77.setIcon(icon_21fbf4a6181ef571b975d560bfcded37);
+        
+    
+        var popup_a38187e00163568f0f021321d06c0cab = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34f85c32af8f53abfe583429cc5eeef7 = $(`<div id="html_34f85c32af8f53abfe583429cc5eeef7" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-16 00:00:00</div>`)[0];
+                popup_a38187e00163568f0f021321d06c0cab.setContent(html_34f85c32af8f53abfe583429cc5eeef7);
+            
+        
+
+        marker_39af30ed556fc0cd6591146916b5be77.bindPopup(popup_a38187e00163568f0f021321d06c0cab)
+        ;
+
+        
+    
+    
+            var marker_c30bc171540c650c9f656952330fe52e = L.marker(
+                [47.0993823351441, 6.825140016714371],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_c97db769eb97b6c1840704cd8e26a6f5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c30bc171540c650c9f656952330fe52e.setIcon(icon_c97db769eb97b6c1840704cd8e26a6f5);
+        
+    
+        var popup_ccead66668d6b75cd7c0b3b8ed29928f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a4f2bb9fcdd41d93dde27ade514c6be = $(`<div id="html_2a4f2bb9fcdd41d93dde27ade514c6be" style="width: 100.0%; height: 100.0%;">manifestation en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-17 00:00:00</div>`)[0];
+                popup_ccead66668d6b75cd7c0b3b8ed29928f.setContent(html_2a4f2bb9fcdd41d93dde27ade514c6be);
+            
+        
+
+        marker_c30bc171540c650c9f656952330fe52e.bindPopup(popup_ccead66668d6b75cd7c0b3b8ed29928f)
+        ;
+
+        
+    
+    
+            var marker_bfdf826ce3f5f9c8f3f8a16475dd780a = L.marker(
+                [47.13341613455254, 7.242944479733647],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_81ffcad229039b4d333f85040962cb63 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bfdf826ce3f5f9c8f3f8a16475dd780a.setIcon(icon_81ffcad229039b4d333f85040962cb63);
+        
+    
+        var popup_02cce761b431fe4f7a42c29c9872ef3b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_116f4da11e4d485d8198dcd07d5e0028 = $(`<div id="html_116f4da11e4d485d8198dcd07d5e0028" style="width: 100.0%; height: 100.0%;">manifestation en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-18 00:00:00</div>`)[0];
+                popup_02cce761b431fe4f7a42c29c9872ef3b.setContent(html_116f4da11e4d485d8198dcd07d5e0028);
+            
+        
+
+        marker_bfdf826ce3f5f9c8f3f8a16475dd780a.bindPopup(popup_02cce761b431fe4f7a42c29c9872ef3b)
+        ;
+
+        
+    
+    
+            var marker_d71da7a7c606084e7cff346e13ad6b18 = L.marker(
+                [46.1944206607244, 6.143669295748282],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_7768d3f59c343d2f6c31960715971c85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d71da7a7c606084e7cff346e13ad6b18.setIcon(icon_7768d3f59c343d2f6c31960715971c85);
+        
+    
+        var popup_198fa5373ad95feee077745aea405082 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e35f7a03b1ab9500b927d39d738ed41 = $(`<div id="html_4e35f7a03b1ab9500b927d39d738ed41" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-22 00:00:00</div>`)[0];
+                popup_198fa5373ad95feee077745aea405082.setContent(html_4e35f7a03b1ab9500b927d39d738ed41);
+            
+        
+
+        marker_d71da7a7c606084e7cff346e13ad6b18.bindPopup(popup_198fa5373ad95feee077745aea405082)
+        ;
+
+        
+    
+    
+            var marker_94538074ae59690e2c735f1b562f4738 = L.marker(
+                [46.517263914958384, 6.627895088107318],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_910ae34decb301a7b3d66e362fe672b7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_94538074ae59690e2c735f1b562f4738.setIcon(icon_910ae34decb301a7b3d66e362fe672b7);
+        
+    
+        var popup_6531d19d1636f218adfcd6173844f40e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a13f2389efca2a7788a48cd1746a3b0 = $(`<div id="html_7a13f2389efca2a7788a48cd1746a3b0" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux touvrier-ère-s de Lip<br>Date: 1973-08-23 00:00:00</div>`)[0];
+                popup_6531d19d1636f218adfcd6173844f40e.setContent(html_7a13f2389efca2a7788a48cd1746a3b0);
+            
+        
+
+        marker_94538074ae59690e2c735f1b562f4738.bindPopup(popup_6531d19d1636f218adfcd6173844f40e)
+        ;
+
+        
+    
+    
+            var marker_b3f74e3a62ef4b4797f0cdb3da330f91 = L.marker(
+                [47.36721491201862, 7.347455239325865],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_eecb4f721227e9a7b2669e94d396100c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b3f74e3a62ef4b4797f0cdb3da330f91.setIcon(icon_eecb4f721227e9a7b2669e94d396100c);
+        
+    
+        var popup_a33640832264ae5b815192c8760671b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a397e211be0cc21f0d98b7b1e391f22 = $(`<div id="html_0a397e211be0cc21f0d98b7b1e391f22" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-24 00:00:00</div>`)[0];
+                popup_a33640832264ae5b815192c8760671b7.setContent(html_0a397e211be0cc21f0d98b7b1e391f22);
+            
+        
+
+        marker_b3f74e3a62ef4b4797f0cdb3da330f91.bindPopup(popup_a33640832264ae5b815192c8760671b7)
+        ;
+
+        
+    
+    
+            var marker_a37b25d34afdb1a05cf838814e0676c9 = L.marker(
+                [47.37612984091458, 8.527413949722506],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_0009c8773775a24178cae9114298a677 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a37b25d34afdb1a05cf838814e0676c9.setIcon(icon_0009c8773775a24178cae9114298a677);
+        
+    
+        var popup_272f2316943d270ce5c9d0b4947ccff3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a8d60056019d22ec9e58c810c84c672 = $(`<div id="html_7a8d60056019d22ec9e58c810c84c672" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-31 00:00:00</div>`)[0];
+                popup_272f2316943d270ce5c9d0b4947ccff3.setContent(html_7a8d60056019d22ec9e58c810c84c672);
+            
+        
+
+        marker_a37b25d34afdb1a05cf838814e0676c9.bindPopup(popup_272f2316943d270ce5c9d0b4947ccff3)
+        ;
+
+        
+    
+    
+            var marker_878702feb4f2b1bc3e6fcff056bf6aac = L.marker(
+                [47.36721491201862, 7.34745523932586],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_60eb4f90e7a377f038b91be8f3a77f04 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_878702feb4f2b1bc3e6fcff056bf6aac.setIcon(icon_60eb4f90e7a377f038b91be8f3a77f04);
+        
+    
+        var popup_330627af4df14c362cd6c89e68f3f800 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7da8a10f7896108208e40d11ad2e267d = $(`<div id="html_7da8a10f7896108208e40d11ad2e267d" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-09-05 00:00:00</div>`)[0];
+                popup_330627af4df14c362cd6c89e68f3f800.setContent(html_7da8a10f7896108208e40d11ad2e267d);
+            
+        
+
+        marker_878702feb4f2b1bc3e6fcff056bf6aac.bindPopup(popup_330627af4df14c362cd6c89e68f3f800)
+        ;
+
+        
+    
+    
+            var marker_51391827a4b4c24b880a4fdcd50b1513 = L.marker(
+                [47.21588783150247, 5.949602214449405],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_ca3cc4359e59f2df4e8a179b01ef371d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_51391827a4b4c24b880a4fdcd50b1513.setIcon(icon_ca3cc4359e59f2df4e8a179b01ef371d);
+        
+    
+        var popup_bb1831dcd29f8a073608ceca125e6163 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_849eed93907c6f737140215af65af676 = $(`<div id="html_849eed93907c6f737140215af65af676" style="width: 100.0%; height: 100.0%;">marche sur Besançon<br>Date: 1973-09-29 00:00:00</div>`)[0];
+                popup_bb1831dcd29f8a073608ceca125e6163.setContent(html_849eed93907c6f737140215af65af676);
+            
+        
+
+        marker_51391827a4b4c24b880a4fdcd50b1513.bindPopup(popup_bb1831dcd29f8a073608ceca125e6163)
+        ;
+
+        
+    
+    
+            var marker_a98af23c101acdb25a1ca34e637e9eec = L.marker(
+                [47.10023912061968, 6.823338403696736],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_7d82fae38cb90e99a2fe9cf6ab5cebd3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a98af23c101acdb25a1ca34e637e9eec.setIcon(icon_7d82fae38cb90e99a2fe9cf6ab5cebd3);
+        
+    
+        var popup_6870dea0f8b5e64aa86b4462d9e3257d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1f8b8fd888df2f2a90ad4aed7d54963 = $(`<div id="html_b1f8b8fd888df2f2a90ad4aed7d54963" style="width: 100.0%; height: 100.0%;">film-meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-10-19 00:00:00</div>`)[0];
+                popup_6870dea0f8b5e64aa86b4462d9e3257d.setContent(html_b1f8b8fd888df2f2a90ad4aed7d54963);
+            
+        
+
+        marker_a98af23c101acdb25a1ca34e637e9eec.bindPopup(popup_6870dea0f8b5e64aa86b4462d9e3257d)
+        ;
+
+        
+    
+    
+            var marker_128106f8415e0e8570031bb1e5ad39c9 = L.marker(
+                [46.99700867415776, 6.936019573012888],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_20399a06406af8cc5387c76f210a5d18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_128106f8415e0e8570031bb1e5ad39c9.setIcon(icon_20399a06406af8cc5387c76f210a5d18);
+        
+    
+        var popup_5d4b8d70980c963b0c451d91dea59730 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c267b69b35225fedddcff6d95b8bc19a = $(`<div id="html_c267b69b35225fedddcff6d95b8bc19a" style="width: 100.0%; height: 100.0%;">film-meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-10-25 00:00:00</div>`)[0];
+                popup_5d4b8d70980c963b0c451d91dea59730.setContent(html_c267b69b35225fedddcff6d95b8bc19a);
+            
+        
+
+        marker_128106f8415e0e8570031bb1e5ad39c9.bindPopup(popup_5d4b8d70980c963b0c451d91dea59730)
+        ;
+
+        
+    
+    
+            var marker_0ef57cb6756279f2d0ac019477a374eb = L.marker(
+                [47.23500720202205, 6.038661626981228],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_824b226f2b9226497af963e2b5f544a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0ef57cb6756279f2d0ac019477a374eb.setIcon(icon_824b226f2b9226497af963e2b5f544a2);
+        
+    
+        var popup_7659bc5f5689a1ec4b11b0efcb5eae83 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ba7a9661a443c81b4479302d709c6f4 = $(`<div id="html_1ba7a9661a443c81b4479302d709c6f4" style="width: 100.0%; height: 100.0%;">regroupement devant le consulat suisse des ouvrier-ère-s de Lip<br>Date: 1973-05-10 00:00:00</div>`)[0];
+                popup_7659bc5f5689a1ec4b11b0efcb5eae83.setContent(html_1ba7a9661a443c81b4479302d709c6f4);
+            
+        
+
+        marker_0ef57cb6756279f2d0ac019477a374eb.bindPopup(popup_7659bc5f5689a1ec4b11b0efcb5eae83)
+        ;
+
+        
+    
+    
+            var marker_3fc7a79950906559a042762ec3a8133c = L.marker(
+                [47.23500720202205, 6.038661626981228],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_8902dae2807630fc221b7ce172da07c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3fc7a79950906559a042762ec3a8133c.setIcon(icon_8902dae2807630fc221b7ce172da07c2);
+        
+    
+        var popup_6e8b401120bb4ce6c29a767018174893 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cad1e3a28a0dfdda7a3a2c58887b5a8 = $(`<div id="html_2cad1e3a28a0dfdda7a3a2c58887b5a8" style="width: 100.0%; height: 100.0%;">regroupement devant le consulat suisse des ouvrier-ère-s de Lip<br>Date: 1973-05-29 00:00:00</div>`)[0];
+                popup_6e8b401120bb4ce6c29a767018174893.setContent(html_2cad1e3a28a0dfdda7a3a2c58887b5a8);
+            
+        
+
+        marker_3fc7a79950906559a042762ec3a8133c.bindPopup(popup_6e8b401120bb4ce6c29a767018174893)
+        ;
+
+        
+    
+    
+            var marker_93d906c4943397312a3ad4ec7a7f4143 = L.marker(
+                [47.28658883558973, 7.279305303399486],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_02a4f007392a582114f9716ed940a872 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_93d906c4943397312a3ad4ec7a7f4143.setIcon(icon_02a4f007392a582114f9716ed940a872);
+        
+    
+        var popup_77824c2121201768337ae5b0461fc6db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f6c16f2d86e2bf4c83acdaf9266d2de = $(`<div id="html_8f6c16f2d86e2bf4c83acdaf9266d2de" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-08-20 00:00:00</div>`)[0];
+                popup_77824c2121201768337ae5b0461fc6db.setContent(html_8f6c16f2d86e2bf4c83acdaf9266d2de);
+            
+        
+
+        marker_93d906c4943397312a3ad4ec7a7f4143.bindPopup(popup_77824c2121201768337ae5b0461fc6db)
+        ;
+
+        
+    
+    
+            var marker_02539a9fe64a4a15e05684179b333400 = L.marker(
+                [47.13457637493075, 7.24348182209114],
+                {}
+            ).addTo(marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d);
+        
+    
+            var icon_76840a07190fd39cba159bc30c902611 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_02539a9fe64a4a15e05684179b333400.setIcon(icon_76840a07190fd39cba159bc30c902611);
+        
+    
+        var popup_dc6d83d0cdb7572ab21f43249f19069d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c2a7ed9e824f70bc452c87c718bb0a9 = $(`<div id="html_7c2a7ed9e824f70bc452c87c718bb0a9" style="width: 100.0%; height: 100.0%;">meeting en solidarité aux ouvrier-ère-s de Lip<br>Date: 1973-09-26 00:00:00</div>`)[0];
+                popup_dc6d83d0cdb7572ab21f43249f19069d.setContent(html_7c2a7ed9e824f70bc452c87c718bb0a9);
+            
+        
+
+        marker_02539a9fe64a4a15e05684179b333400.bindPopup(popup_dc6d83d0cdb7572ab21f43249f19069d)
+        ;
+
+        
+    
+    
+            marker_cluster_24e964f053af3b5b8ecb2dcc7c6fa17d.addTo(map_f5e7e87c0a0e13c0f3f138bce80fb24d);
+        
+</script>
+</html>

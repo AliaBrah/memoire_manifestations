@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_893064cc28d152ad630e0953dc1dea8d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_893064cc28d152ad630e0953dc1dea8d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_893064cc28d152ad630e0953dc1dea8d = L.map(
+                "map_893064cc28d152ad630e0953dc1dea8d",
+                {
+                    center: [46.8, 7.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_55d94581b7339764b101ef9f00da3efd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_55d94581b7339764b101ef9f00da3efd.addTo(map_893064cc28d152ad630e0953dc1dea8d);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD");
+                }
+            });
+            map_893064cc28d152ad630e0953dc1dea8d.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": true, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": true}
+            );
+            map_893064cc28d152ad630e0953dc1dea8d.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.9343458441569386, 46.99188006348184]}, "properties": {"time": "1973-05-18T00:00:00", "popup": "manifestation des ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-18<br>Nombre de personnes: 200.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.930432108830188, 46.99320982097671]}, "properties": {"time": "1973-05-25T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-25<br>Nombre de personnes: 60.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.603599220502514, 47.05768749590493]}, "properties": {"time": "1973-05-18T00:00:00", "popup": "manifestation des ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-18<br>Nombre de personnes: 100.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.668719524003341, 47.0592181584143]}, "properties": {"time": "1973-05-18T00:00:00", "popup": "manifestation des ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-18<br>Nombre de personnes: 100.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.038661626981228, 47.23500720202205]}, "properties": {"time": "1973-05-18T00:00:00", "popup": "regroupement devant le consulat suisse des ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-18<br>Nombre de personnes: 500.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.931205948736114, 46.99192346749312]}, "properties": {"time": "1973-05-28T00:00:00", "popup": "regroupement devant le si\u00e8ge d'Ebauches S.A<br>Date: 1973-05-28<br>Nombre de personnes: 50.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.024281645694291, 47.23796264126725]}, "properties": {"time": "1973-05-24T00:00:00", "popup": "premi\u00e8re manifestation publique en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-24<br>Nombre de personnes: 5000.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2.359906776271288, 48.81888822402997]}, "properties": {"time": "1973-05-29T00:00:00", "popup": "manifestation des ouvrier-\u00e8re-s de Lip jusqu'\u00e0 l'ambassade suisse<br>Date: 1973-05-29<br>Nombre de personnes: 550.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.050844610052359, 47.26649065218147]}, "properties": {"time": "1973-06-12T00:00:00", "popup": "regroupement devant l'usine Lip des ouvrier-\u00e8re-s de Lip<br>Date: 1973-06-12<br>Nombre de personnes: 1000.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.050844610052359, 47.26649065218147]}, "properties": {"time": "1973-06-13T00:00:00", "popup": "meeting des responsables des ouvrier-\u00e8re-s de Lip<br>Date: 1973-06-13<br>Nombre de personnes: 10.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.020837181229862, 47.24416774529365]}, "properties": {"time": "1973-06-15T00:00:00", "popup": "manifestation \u00ab ville morte \u00bb<br>Date: 1973-06-15<br>Nombre de personnes: 10000.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.996678263848151, 47.152135947796985]}, "properties": {"time": "1973-06-20T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-06-20<br>Nombre de personnes: 16.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.24739293438954, 47.1421580409844]}, "properties": {"time": "1973-06-20T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-06-20", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.823338403696736, 47.10023912061968]}, "properties": {"time": "1973-06-21T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-06-21<br>Nombre de personnes: 50.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.825140016714371, 47.0993823351441]}, "properties": {"time": "1973-06-23T00:00:00", "popup": "manifestation internationale<br>Date: 1973-06-23<br>Nombre de personnes: 700.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.823338403696736, 47.10023912061968]}, "properties": {"time": "1973-06-23T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-06-23<br>Nombre de personnes: 500.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.823338403696736, 47.10023912061968]}, "properties": {"time": "1973-06-27T00:00:00", "popup": "assembl\u00e9e d\u2019information \u00e0 l'intention des ouvrier-\u00e8re-s chaux-de-fonniers<br>Date: 1973-06-27", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.050844610052359, 47.26649065218147]}, "properties": {"time": "1973-08-14T00:00:00", "popup": "manifestation en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-14<br>Nombre de personnes: 12000.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.34745523932586, 47.36721491201862]}, "properties": {"time": "1973-08-16T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-16", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.825140016714371, 47.0993823351441]}, "properties": {"time": "1973-08-17T00:00:00", "popup": "manifestation en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-17<br>Nombre de personnes: 500.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.242944479733647, 47.13341613455254]}, "properties": {"time": "1973-08-18T00:00:00", "popup": "manifestation en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-18<br>Nombre de personnes: 300.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.143669295748282, 46.1944206607244]}, "properties": {"time": "1973-08-22T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-22<br>Nombre de personnes: 500.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.627895088107318, 46.517263914958384]}, "properties": {"time": "1973-08-23T00:00:00", "popup": "meeting en solidarit\u00e9 aux touvrier-\u00e8re-s de Lip<br>Date: 1973-08-23<br>Nombre de personnes: 700.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.347455239325865, 47.36721491201862]}, "properties": {"time": "1973-08-24T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-24<br>Nombre de personnes: 200.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [8.527413949722506, 47.37612984091458]}, "properties": {"time": "1973-08-31T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-31<br>Nombre de personnes: 700.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.34745523932586, 47.36721491201862]}, "properties": {"time": "1973-09-05T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-09-05<br>Nombre de personnes: 100.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [5.949602214449405, 47.21588783150247]}, "properties": {"time": "1973-09-29T00:00:00", "popup": "marche sur Besan\u00e7on<br>Date: 1973-09-29<br>Nombre de personnes: 100000.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.823338403696736, 47.10023912061968]}, "properties": {"time": "1973-10-19T00:00:00", "popup": "film-meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-10-19", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.936019573012888, 46.99700867415776]}, "properties": {"time": "1973-10-25T00:00:00", "popup": "film-meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-10-25", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.038661626981228, 47.23500720202205]}, "properties": {"time": "1973-05-10T00:00:00", "popup": "regroupement devant le consulat suisse des ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-10<br>Nombre de personnes: 100.0", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [6.038661626981228, 47.23500720202205]}, "properties": {"time": "1973-05-29T00:00:00", "popup": "regroupement devant le consulat suisse des ouvrier-\u00e8re-s de Lip<br>Date: 1973-05-29", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.279305303399486, 47.28658883558973]}, "properties": {"time": "1973-08-20T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-08-20", "style": {"color": "blue", "radius": 6}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.24348182209114, 47.13457637493075]}, "properties": {"time": "1973-09-26T00:00:00", "popup": "meeting en solidarit\u00e9 aux ouvrier-\u00e8re-s de Lip<br>Date: 1973-09-26<br>Nombre de personnes: 25.0", "style": {"color": "blue", "radius": 6}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_40fc681132c14ed78cd1779098fbd3aa = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_893064cc28d152ad630e0953dc1dea8d);
+        
+</script>
+</html>
